@@ -1,3 +1,6 @@
+{{- $version := split hugo.Version "." }}
+{{- $major := int (index $version 0) }}
+{{- $minor := int (index $version 1) }}
 {{- $context := .context }}
 {{- $color := .color | default "" }}
 {{- $content := .content }}
@@ -29,13 +32,25 @@
 {{- end }}
 {{- $urlPrefix := strings.TrimRight "/" $context.RelPermalink }}
 {{- with $context }}
+{{- if ne .BundleType "leaf" }}
+  {{- if or (and (eq $major 0) (ge $minor 112)) (gt $major 0) }}
+    {{- warnf "%q: UNSUPPORTED usage of 'attachments' shortcode found while using Hugo >= 0.112.0, use a leaf bundle instead; see https://mcshelby.github.io/hugo-theme-relearn/shortcodes/attachments/index.html#single-language" $context.File.Path }}
+  {{- else }}
+    {{- warnf "%q: DEPRECATED usage of 'attachments' shortcode found which will not be compatible while using Hugo >= 0.112.0, use a leaf bundle instead; see https://mcshelby.github.io/hugo-theme-relearn/shortcodes/attachments/index.html#single-language" $context.File.Path }}
+  {{- end }}
+{{- end }}
 <div class="box attachments cstyle {{ $style }}"{{ if $color }} style="--VARIABLE-BOX-color: {{ $color }};"{{ end }}>
-  <div class="box-label">{{ if $icon }}<i class="{{ $icon }}"></i>{{ end }}{{ if and $icon $title }} {{ end }}{{ $title | markdownify }}</div>
+  <div class="box-label">{{ if $icon }}<i class="{{ $icon }}"></i>{{ end }}{{ if and $icon $title }} {{ end }}{{ $title | .RenderString }}</div>
   <ul class="box-content attachments-files">
-  {{- $fileLink := printf "%s/%s" (.Language.ContentDir | default "content") .File.Dir }}
-  {{- $fileLink = replace (replace $fileLink "\\" "/") "content/" "" }}
-  {{- $fileDir := printf "%s/%s" (.Language.ContentDir | default "content") .File.Dir  }}
-  {{- $fileDir = replace $fileDir "\\" "/" }}
+  {{- $fileDir := "" }}
+  {{- if or (and (eq $major 0) (ge $minor 112)) (gt $major 0) }}
+    {{- $fileDir = path.Dir (strings.TrimPrefix (path.Clean hugo.WorkingDir) (path.Clean .File.Filename)) }}
+  {{- else }}
+    {{- $fileDir = printf "%s/%s" (path.Clean (.Language.ContentDir | default "content")) (path.Clean .File.Dir) }}
+  {{- end }}
+  {{- $fileDir = printf "%s/" (path.Clean (strings.TrimPrefix "/" $fileDir)) }}
+  {{- $fileLink := $fileDir }}
+  {{- $fileLink = strings.TrimPrefix "content/" $fileLink }}
   {{- $filesName := printf "%s.files" .File.BaseFileName }}
   {{- if and (eq .File.BaseFileName "index") (fileExists (printf "%sfiles" $fileDir)) }}
     {{- $c := "" }}{{/* backward compat to < 5.9.0 behavior */}}

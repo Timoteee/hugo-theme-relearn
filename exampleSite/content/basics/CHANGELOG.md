@@ -1,5 +1,127 @@
 # Changelog
 
+## 5.17.1 (2023-06-22)
+
+### Enhancements
+
+- [**feature**][**change**] highlight: make copy to clipboard appear on hover [#574](https://github.com/McShelby/hugo-theme-relearn/issues/574)
+
+---
+
+## 5.17.0 (2023-06-22)
+
+### Enhancements
+
+- [**feature**] highlight: add configurable line breaks [#169](https://github.com/McShelby/hugo-theme-relearn/issues/169)
+
+### Fixes
+
+- [**bug**] theme: support Hugo 0.114.0 [#573](https://github.com/McShelby/hugo-theme-relearn/issues/573)
+- [**bug**] taxonomy: fix number tags [#570](https://github.com/McShelby/hugo-theme-relearn/issues/570)
+- [**bug**] highlight: improve copy to clipboard [#569](https://github.com/McShelby/hugo-theme-relearn/issues/569)
+
+---
+
+## 5.16.2 (2023-06-10)
+
+### Enhancements
+
+- [**feature**] theme: revamp 404 page [#566](https://github.com/McShelby/hugo-theme-relearn/issues/566)
+
+---
+
+## 5.16.1 (2023-06-09)
+
+### Enhancements
+
+- [**feature**] theme: add deprecation warnings [#565](https://github.com/McShelby/hugo-theme-relearn/issues/565)
+
+### Fixes
+
+- [**bug**] mermaid: allow for YAML frontmatter inside of graph [#564](https://github.com/McShelby/hugo-theme-relearn/issues/564)
+- [**bug**] alias: fix redirect URLs in case of empty BaseURL [#562](https://github.com/McShelby/hugo-theme-relearn/issues/562)
+
+---
+
+## 5.16.0 (2023-06-08)
+
+### Enhancements
+
+- [**feature**] tabs: add title and icon option [#552](https://github.com/McShelby/hugo-theme-relearn/issues/552)
+- [**feature**] shortcodes: add style option to mimic code box color scheme [#551](https://github.com/McShelby/hugo-theme-relearn/issues/551)
+- [**feature**] tabs: support color options [#550](https://github.com/McShelby/hugo-theme-relearn/issues/550)
+- [**feature**] favicon: add light & dark option for OS's prefered color scheme [#549](https://github.com/McShelby/hugo-theme-relearn/issues/549)
+
+### Fixes
+
+- [**bug**] icon: remove whitespace on start [#560](https://github.com/McShelby/hugo-theme-relearn/issues/560)
+- [**bug**] shortcodes: avoid superflous margin at start and end of content [#558](https://github.com/McShelby/hugo-theme-relearn/issues/558)
+- [**bug**] expand: fix html encoding of finishing content tag [#557](https://github.com/McShelby/hugo-theme-relearn/issues/557)
+- [**bug**] icon: fix ouput "raw HTML omitted" with goldmark config unsafe=false [#555](https://github.com/McShelby/hugo-theme-relearn/issues/555)
+
+---
+
+## 5.15.2 (2023-05-29)
+
+### Enhancements
+
+- [**feature**] taxonomy: add support for category default taxonomy [#541](https://github.com/McShelby/hugo-theme-relearn/issues/541)
+
+### Fixes
+
+- [**bug**] attachments: work for Hugo < 0.112 [#546](https://github.com/McShelby/hugo-theme-relearn/issues/546)
+
+---
+
+## 5.15.1 (2023-05-25)
+
+### Fixes
+
+- [**bug**] shortcodes: intermediately use random ids instead of .Ordinal [#543](https://github.com/McShelby/hugo-theme-relearn/issues/543)
+
+---
+
+## 5.15.0 (2023-05-25)
+
+### Enhancements
+
+- [**feature**] tab: new shortcode to display single tab [#538](https://github.com/McShelby/hugo-theme-relearn/issues/538)
+- [**feature**][**change**] tabs: treat groupid as unique if not set [#537](https://github.com/McShelby/hugo-theme-relearn/issues/537)
+- [**feature**] expand: indent expanded content [#536](https://github.com/McShelby/hugo-theme-relearn/issues/536)
+- [**feature**] notice: make boxes more prominent [#535](https://github.com/McShelby/hugo-theme-relearn/issues/535)
+
+### Fixes
+
+- [**bug**] attachments: fix build error since Hugo 0.112 [#540](https://github.com/McShelby/hugo-theme-relearn/issues/540)
+
+### Maintenance
+
+- [**task**] chore: update Mermaid to 9.4.3 [#534](https://github.com/McShelby/hugo-theme-relearn/issues/534)
+- [**task**] mermaid: update to 10.2.0 [#499](https://github.com/McShelby/hugo-theme-relearn/issues/499)
+
+---
+
+## 5.14.3 (2023-05-20)
+
+### Fixes
+
+- [**bug**] tags: show taxonomy toc for standard installation [#533](https://github.com/McShelby/hugo-theme-relearn/issues/533)
+
+---
+
+## 5.14.2 (2023-05-20)
+
+### Fixes
+
+- [**bug**] tags: translate breadcrumb and title for taxonomy [#532](https://github.com/McShelby/hugo-theme-relearn/issues/532)
+
+---
+
+## 5.14.1 (2023-05-20)
+*No changelog for this release.*
+
+---
+
 ## 5.14.0 (2023-05-19)
 
 ### Enhancements

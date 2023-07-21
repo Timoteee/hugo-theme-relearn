@@ -7,9 +7,9 @@
 
 {{- $title := i18n .Data.Singular }}
 {{- if not $title }}
-  {{- $title = .Data.Singular | humanize }}
+  {{- $title = .Data.Singular }}
 {{- end }}
-{{- $title = printf "%s %s %s" $title (default "::" .Site.Params.titleSeparator) (.Title | humanize) }}
+{{- $title = printf "%s %s %s" $title (default "::" .Site.Params.titleSeparator) .Title }}
 <h1 id="{{ $title | anchorize }}">{{ $title }}</h1>
 <ul class="columnize">
   {{- range sort .Pages "Title" }}

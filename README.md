@@ -25,13 +25,13 @@ The Relearn theme is a fork of the great [Learn theme](https://github.com/matcor
   - Predefined light, dark and color variants
   - [User selectable variants](https://mcshelby.github.io/hugo-theme-relearn/basics/customization#multiple-variants)
   - [Stylesheet generator](https://mcshelby.github.io/hugo-theme-relearn/basics/generator)
-  - [Configurable syntax highlighting](https://mcshelby.github.io/hugo-theme-relearn/cont/syntaxhighlight)
+  - [Configurable syntax highlighting](https://mcshelby.github.io/hugo-theme-relearn/shortcodes/highlight)
 - **Unique theme features**
   - [Print whole chapters or even the complete site](https://mcshelby.github.io/hugo-theme-relearn/basics/configuration#activate-print-support)
   - In page search
   - [Site search](https://mcshelby.github.io/hugo-theme-relearn/basics/configuration#activate-search)
   - [Dedicated search page](https://mcshelby.github.io/hugo-theme-relearn/basics/configuration#activate-dedicated-search-page)
-  - [Tagging support](https://mcshelby.github.io/hugo-theme-relearn/cont/tags)
+  - [Taxonomy support](https://mcshelby.github.io/hugo-theme-relearn/cont/taxonomy)
   - Hidden pages
   - Unlimited nested menu dependend on your site structure
   - Navigation buttons dependend on your site structure
@@ -55,9 +55,9 @@ The Relearn theme is a fork of the great [Learn theme](https://github.com/matcor
   - [Math and chemical formulae using MathJax](https://mcshelby.github.io/hugo-theme-relearn/shortcodes/math)
   - [Mermaid diagrams for flowcharts, sequences, gantts, pie, etc.](https://mcshelby.github.io/hugo-theme-relearn/shortcodes/mermaid)
   - [Colorful boxes](https://mcshelby.github.io/hugo-theme-relearn/shortcodes/notice)
+  - [OpenAPI specifications using Swagger UI](https://mcshelby.github.io/hugo-theme-relearn/shortcodes/openapi)
   - [Reveal you site's configuration parameter](https://mcshelby.github.io/hugo-theme-relearn/shortcodes/siteparam)
-  - [Swagger UI for your OpenAPI Specifications](https://mcshelby.github.io/hugo-theme-relearn/shortcodes/openapi)
-  - [Tabbed panels](https://mcshelby.github.io/hugo-theme-relearn/shortcodes/tabs)
+  - [Single tabbed panels](https://mcshelby.github.io/hugo-theme-relearn/shortcodes/tab) and [multiple tabbed panels](https://mcshelby.github.io/hugo-theme-relearn/shortcodes/tabs)
 
 ## Installation & Usage
 
